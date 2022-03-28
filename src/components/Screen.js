@@ -1,11 +1,11 @@
 import NumberFormat from 'react-number-format';
 
-const Screen = (props) =>{
+const Screen = ({input,prevState}) =>{
    return (
         <div className='screen'>
-              {props.input !=="" || props.input === "0" 
-              ? (<NumberFormat value={props.input} displayType={'text'} thousandSeparator={true}/>)
-              : (<NumberFormat value={props.prevState} displayType={"text"} thousandSeparator={true}/>)}
+              {input !=="" || input === "0" 
+              ? (<NumberFormat value={input} displayType={'text'} thousandSeparator={true}/>)
+              : (<NumberFormat value={prevState} displayType={"text"} thousandSeparator={true}/>)}
         </div>
    );
 }

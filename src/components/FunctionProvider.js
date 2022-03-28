@@ -5,31 +5,25 @@ import '../styles/Button.css'
 import '../styles/Container.css'
 import '../styles/Screen.css'
 
-const FunctionProvider = (props) =>{
-    const btn = props.buttons
+const FunctionProvider = ({input,buttons,prevState}) =>{
+    const btn = buttons
     const buttonsArray = btn.map((button)=>{
         console.log(button.click);
             return(
-                <Button name={button.name} onClick = {()=>button.click.reset} button={button.button}/>
+                <Button name={button.name} click = {button.click} button={button.button}/>
             );
         });
- const reset = ()=>{
-        // setPrevState("");
-        // setCurrState("");
-        // setInput("0");
-        console.log("reset clicked");
-    };
+
     return(
 
         <div className='container'>
 
           <div className="top">
             <h2>Calculator</h2>
-            <Screen input={props.input} prevState={props.prevState}/>
+            <Screen input={input} prevState={prevState}/>
           </div>
           <div className='wrapper'>
             {buttonsArray}
-            <Button name="btn" click={reset} button="AC"/>
             {/* <Button name="btn" click={reset} button="AC"/>
             <Button name="btn" click={clear} button={<MdOutlineBackspace />}/>
             <Button name="btn" click={percent} button="%"/>

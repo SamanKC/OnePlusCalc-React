@@ -82,10 +82,9 @@ function App() {
     };
 
   const reset = ()=>{
-        // setPrevState("");
-        // setCurrState("");
-        // setInput("0");
-        console.log("reset clicked");
+        setPrevState("");
+        setCurrState("");
+        setInput("0");
     };
    
     const clear = () =>{
@@ -97,26 +96,26 @@ function App() {
     };
     
    const buttons = [
-        {name:'btn', click: {reset}, button:'AC'},
-        // {name:'btn', click: {clear}, button:'<MdOutlineBackspace />'},
-        // {name:'btn', click: {percent}, button:'%'},
-        // {name:'btn light-gray', click: {operatorType}, button:'/'},
-        // {name:'btn', click: {num}, button:'7'},
-        // {name:'btn', click: {num}, button:'8'},
-        // {name:'btn', click: {num}, button:'9'},
-        // {name:'btn light-gray', click: {operatorType}, button:'*'},
-        // {name:'btn', click: {num}, button:'4'},
-        // {name:'btn', click: {num}, button:'5'},
-        // {name:'btn', click: {num}, button:'6'},
-        // {name:'btn light-gray', click: {operatorType}, button:'-'},
-        // {name:'btn', click: {num}, button:'1'},
-        // {name:'btn', click: {num}, button:'2'},
-        // {name:'btn', click: {num}, button:'3'},
-        // {name:'btn light-gray', click: {operatorType}, button:'+'},
-        // {name:'btn', click: {operatorType}, button:'()'},
-        // {name:'btn', click: {num}, button:'0'},
-        // {name:'btn', click: {num}, button:'.'},
-        // {name:'btn red', click: {equals}, button:'='},
+        {name:'btn', click: reset, button:'AC'},
+        {name:'btn', click: clear, button:'<MdOutlineBackspace />'},
+        {name:'btn', click: percent, button:'%'},
+        {name:'btn light-gray', click: operatorType, button:'/'},
+        {name:'btn', click: num, button:'7'},
+        {name:'btn', click: num, button:'8'},
+        {name:'btn', click: num, button:'9'},
+        {name:'btn light-gray', click: operatorType, button:'*'},
+        {name:'btn', click: num, button:'4'},
+        {name:'btn', click: num, button:'5'},
+        {name:'btn', click:num, button:'6'},
+        {name:'btn light-gray', click: operatorType, button:'-'},
+        {name:'btn', click: num, button:'1'},
+        {name:'btn', click: num, button:'2'},
+        {name:'btn', click: num, button:'3'},
+        {name:'btn light-gray', click: operatorType, button:'+'},
+        {name:'btn', click: operatorType, button:'()'},
+        {name:'btn', click: num, button:'0'},
+        {name:'btn', click: num, button:'.'},
+        {name:'btn red', click: equals, button:'='},
     ];
 
   return <FunctionProvider buttons={buttons} input={input} prevState={prevState}/> 

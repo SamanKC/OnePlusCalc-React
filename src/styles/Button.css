@@ -1,0 +1,22 @@
+.btn {
+  display: grid;
+  place-content: center;
+  background-color: black;
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
+  font-size: 1.7rem;
+}
+
+.btn:hover{
+  background-color: gray;
+}
+
+.light-gray{
+  background-color: rgb(48, 48, 48);
+}
+
+.red{
+  background-color: rgb(187, 0, 0);
+  font-weight: bold;
+}
